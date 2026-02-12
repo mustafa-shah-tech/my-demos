@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Portfolio | Modern Web Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="container text-center">
+            <div class="logo reveal">DEMO</div>
+            <h1 class="reveal">Crafting Premium Digital Experiences.</h1>
+            <p class="subtitle reveal">A collection of high-performance, responsive landing pages built with modern
+                HTML/CSS techniques.</p>
+            <a href="#work" class="btn reveal">View Demo Work</a>
+        </div>
+    </header>
+
+    <section id="work" class="portfolio-section">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Featured Demo Projects</h2>
+                <p>Explore specialized landing pages designed for high conversion and visual impact.</p>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Agency Demo -->
+                <a href="demos/agency/index.html" class="portfolio-card">
+                    <span class="card-tag">CREATIVE AGENCY</span>
+                    <h3>Studio Alpha</h3>
+                    <p>A bold, visual-heavy landing page for creative studios and design agencies. Features elegant
+                        typography and immersive sections.</p>
+                    <span class="card-link">View Demo &rarr;</span>
+                </a>
+
+                <!-- SaaS Demo -->
+                <a href="demos/saas/index.html" class="portfolio-card">
+                    <span class="card-tag">SAAS PRODUCT</span>
+                    <h3>FlowTech AI</h3>
+                    <p>Clean and professional SaaS landing page with feature grids, benefit callouts, and
+                        conversion-focused layouts.</p>
+                    <span class="card-link">View Demo &rarr;</span>
+                </a>
+
+                <!-- Restaurant Demo -->
+                <a href="demos/restaurant/index.html" class="portfolio-card">
+                    <span class="card-tag">RESTAURANT & BAR</span>
+                    <h3>The Artisan Kitchen</h3>
+                    <p>An appetizing landing page for modern restaurants. Showcases menus, atmosphere, and reservation
+                        hooks.</p>
+                    <span class="card-link">View Demo &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Developer Portfolio. Built with passion for excellence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

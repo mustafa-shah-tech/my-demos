@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Alpha | Creative Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">ALPHA.</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero reveal">
+            <h1>THINK<br>BEYOND.</h1>
+            <p class="delay-1">A full-service digital agency creating meaningful experiences for the next generation of
+                brands.</p>
+        </header>
+
+        <section id="about" class="reveal">
+            <div class="section-head">
+                <h2>The Studio</h2>
+                <p>We are a small team of designers and developers located in the heart of the digital world.</p>
+            </div>
+            <div class="grid">
+                <div class="delay-2">
+                    <p>Founded in 2026, we've helped hundreds of startups find their voice and establish a premium
+                        digital footprint that converts.</p>
+                </div>
+                <div class="delay-3">
+                    <p>Our philosophy is simple: design that works, code that scales, and a relationship that lasts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-head reveal">
+                <h2>Our Expertise</h2>
+            </div>
+            <div class="grid">
+                <div class="service-card reveal delay-1">
+                    <h3>01. Branding</h3>
+                    <p>Visual identity systems that capture your essence and speak to your audience.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <h3>02. UI/UX Design</h3>
+                    <p>Intuitive user experiences designed with precision and beauty.</p>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <h3>03. Web Development</h3>
+                    <p>High-performance websites built with the latest technologies.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <h3>04. Strategy</h3>
+                    <p>Data-driven insights to help you grow and stay ahead of the curve.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal">
+            <div class="section-head">
+                <h2>Let's Talk</h2>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+        </section>
+
+        <footer style="padding: 4rem 0; text-align: center; border-top: 1px solid #27272a; color: #52525b;">
+            <p>&copy; 2026 Studio Alpha. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

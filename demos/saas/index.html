@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowTech AI | Streamline Your Workflow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-wrap">
+                <div class="logo" style="font-weight: 800; color: var(--primary); font-size: 1.25rem;">FLOWTECH.</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="btn" style="padding: 0.6rem 1.2rem;">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero reveal">
+            <div class="container">
+                <h1>Unlock Peak Productivity <br>with AI-Powered Logic.</h1>
+                <p>FlowTech brings all your tools into one seamless interface, helping your team focus on what actually
+                    matters.</p>
+                <div class="cta-btns" style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#" class="btn">Start Free Trial</a>
+                    <a href="#" class="btn"
+                        style="background: white; color: var(--text-main); border: 1px solid var(--border);">Book a
+                        Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Everything You Need to Scale</h2>
+                    <p style="color: var(--text-muted);">Powerful features to stay ahead of the curve.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                        <h3>Smart Automation</h3>
+                        <p>Let AI handle the repetitive tasks so you can focus on creative problem solving.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                        <h3>Real-time Sync</h3>
+                        <p>All your data is synchronized across devices instantly. No more waiting.</p>
+                    </div>
+                    <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                        <h3>Team Insights</h3>
+                        <p>Deep analytics to understand how your team works best and where to optimize.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Simple, Transparent Pricing</h2>
+                </div>
+                <div class="price-grid">
+                    <div class="price-card">
+                        <h3>Starter</h3>
+                        <p>Perfect for individuals</p>
+                        <div class="price">$0<span>/mo</span></div>
+                        <ul style="list-style: none; margin-bottom: 2rem; color: var(--text-muted);">
+                            <li>5 Projects</li>
+                            <li>Basic Analytics</li>
+                            <li>Community Support</li>
+                        </ul>
+                        <a href="#" class="btn" style="width: 100%; box-sizing: border-box;">Sign Up</a>
+                    </div>
+                    <div class="price-card popular">
+                        <div class="badge">MOST POPULAR</div>
+                        <h3>Pro</h3>
+                        <p>For growing teams</p>
+                        <div class="price">$29<span>/mo</span></div>
+                        <ul style="list-style: none; margin-bottom: 2rem; color: var(--text-muted);">
+                            <li>Unlimited Projects</li>
+                            <li>Advanced AI Tools</li>
+                            <li>24/7 Priority Support</li>
+                        </ul>
+                        <a href="#" class="btn" style="width: 100%; box-sizing: border-box;">Start Trial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 4rem 0; background: var(--text-main); color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 FlowTech AI. All analytics secured.</p>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>

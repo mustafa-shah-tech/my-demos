@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Kitchen | Fine Dining & Spirits</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h2 style="font-size: 1.5rem; color: var(--dark);">ARTISAN.</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#reserve">Reservations</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="hero reveal">
+        <div class="container">
+            <p class="reveal delay-1">ESTABLISHED 2026</p>
+            <h1 class="reveal delay-2">Flavors of the Earth.</h1>
+            <p class="reveal delay-1">Experience a culinary journey crafted from local ingredients and centuries of
+                tradition.</p>
+            <a href="#reserve" class="btn-gold reveal delay-2">BOOK A TABLE</a>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Seasonal Menu</h2>
+                <p>Curated by Executive Chef Julian Vance</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Column 1 -->
+                <div class="reveal delay-1">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Truffle Infused Risotto</h3>
+                            <p>Wild mushrooms, parmigiano reggiano, fresh herbs.</p>
+                        </div>
+                        <div class="price">$24</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Roasted Sea Bass</h3>
+                            <p>Lemon butter sauce, braised fennel, microgreens.</p>
+                        </div>
+                        <div class="price">$32</div>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="reveal delay-2">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Heritage Beef Tenderloin</h3>
+                            <p>Smoked garlic mash, red wine reduction.</p>
+                        </div>
+                        <div class="price">$38</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h3>Spiced Carrot Hummus</h3>
+                            <p>House-made sourdough, toasted pinenuts.</p>
+                        </div>
+                        <div class="price">$14</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserve" class="reserve reveal">
+        <div class="container">
+            <h2>Join Us for Dinner</h2>
+            <form>
+                <input type="date">
+                <input type="time">
+                <input type="number" placeholder="Guests">
+                <button type="submit" class="btn-gold" style="border:none; cursor:pointer;">RESERVE NOW</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="padding: 4rem 0; text-align: center; background: #000; color: #888;">
+        <div class="container">
+            <p>&copy; 2026 The Artisan Kitchen. 123 Culinary Way, Gastronomy Heights.</p>
+        </div>
+    </footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
